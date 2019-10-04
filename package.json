@@ -6,11 +6,17 @@
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4",
-    "@types/react": "16.9.2",
+    "@types/react": "^16.9.2",
     "@types/react-dom": "16.9.0",
+    "@types/styled-theming": "^2.2.2",
+    "mobx": "5.9.0",
+    "mobx-react-lite": "1.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
+    "styled-components": "^4.4.0",
+    "styled-components-ts": "0.0.15",
+    "styled-theming": "^2.2.0",
     "typescript": "3.6.2"
   },
   "scripts": {
