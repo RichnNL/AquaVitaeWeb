@@ -2,6 +2,8 @@ import theme from 'styled-theming';
 import {Colors} from './colors';
 import * as React from 'react';
 
+
+
 export const backgroundColor = theme.variants('theme', 'type', {
     primary: {light: Colors.primary.default },
     secondary: {light: Colors.primary.light }
@@ -22,9 +24,7 @@ export const borderColor = theme.variants('theme', 'type', {
   secondary: {light: Colors.primary.light }
 });
   
-
-
-  export const textColor = theme.variants('theme', 'type', {
+export const textColor = theme.variants('theme', 'type', {
   primary: {light: Colors.text.default },
   secondary: {light: Colors.text.light }
 });
@@ -63,8 +63,10 @@ export const buttonFontSize = theme.variants('layout', 'size', {
 
 
 export interface ITheme {
- children?: React.ReactNode, 
+ children?: React.ReactNode | any; 
 }
+
+
 
 
 

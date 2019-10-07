@@ -4,9 +4,9 @@ import {Sizes} from './theme/media';
 import styledComponentsTS from 'styled-components-ts';
 import styledComponents from 'styled-components'
 
-interface IStyledButton extends Theme.ITheme {
-  type: 'primary' | 'secondary';
-  btnSize: 'small' | 'medium' | 'large';
+export interface IStyledButton extends Theme.ITheme {
+  type?: 'primary' | 'secondary';
+  btnSize?: 'small' | 'medium' | 'large';
 }
 
 const StyledButton = styledComponentsTS<IStyledButton>(styledComponents.button)`
@@ -44,8 +44,8 @@ cursor: pointer;
 `;
 
 
-
 export default StyledButton;
+
 
   
  
