@@ -1,19 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {ThemeToggleProvider} from './providers/ThemeProvider';
-import {AVButton} from './components/Button/AVButton';
+import {ThemeToggleProvider} from './state/providers/ThemeProvider';
+import MainPage from './pages/MainPage';
+import AuthenticationProvider from './state/providers/AuthenticationProvider';
+import { BrowserRouter as Router } from "react-router-dom";
 
 
 
 const App: React.FC = () => {
   return (
     <ThemeToggleProvider>
-       <AVButton > Hello World</AVButton>
+      <AuthenticationProvider>
+        <Router>
+          <MainPage/>
+        </Router>
+      </AuthenticationProvider>   
     </ThemeToggleProvider>
-      
-
-  
   );
 }
 

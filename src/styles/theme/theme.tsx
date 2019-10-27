@@ -60,8 +60,6 @@ export const buttonFontSize = theme.variants('layout', 'size', {
   large: { compact: '30px', cozy: '35px' },
 });
 
-
-
 export interface ITheme {
  children?: React.ReactNode | any; 
 }

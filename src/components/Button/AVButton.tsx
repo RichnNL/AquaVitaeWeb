@@ -1,7 +1,9 @@
 import React from 'react';
 import StyledButton, {IStyledButton} from '../../styles/StyledButton';
-import {ThemeContext} from '../../providers/ThemeProvider';
 import { useObserver } from 'mobx-react';
+import {useHistory} from "react-router-dom";
+import {useAuthenticationStore} from '../../state/hooks/AuthenticationHook';
+
 interface Props extends IStyledButton {
   
 }
@@ -9,18 +11,17 @@ interface Props extends IStyledButton {
 
 
 export const  AVButton: React.FC<Props> = (props) => { 
-
-  const themeStore = React.useContext(ThemeContext);
-  if (!themeStore) throw Error("Store shouldn't be null");
-
+  const history = useHistory();
+  const authStore = useAuthenticationStore();
   const handleClick = () => {
-    themeStore.toggleTheme();
+    authStore.logInFacebook();
   }
   return useObserver(() => {   
-     return <StyledButton type={props.type} btnSize={props.btnSize} 
+     return <StyledButton  type={props.type} btnSize={props.btnSize} 
      onClick={handleClick}>
     
-      {themeStore.theme} </StyledButton>
+      Hello </StyledButton>
+      
 
     });
   

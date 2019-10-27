@@ -36,4 +36,4 @@ export const createThemeStore = () => {
 };
 
 export type ThemeStore = ReturnType<typeof createThemeStore>
-export const ThemeContext = React.createContext(ThemeStore);
+
