@@ -1,3 +1,5 @@
 import React from 'react';
-import {IAuthenticationStore} from '../stores/AuthenticationStore';
-export const AuthenticationContext = React.createContext<IAuthenticationStore | null>(null);
+import {IAuthenticationStore} from '../stores/Authentication/AuthenticationStore';
+
+const AuthenticationContext = React.createContext<IAuthenticationStore | null>(null);
+export default AuthenticationContext;

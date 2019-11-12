@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-import {IAuthentication} from '../../state/stores/AuthenticationStore';
+import {IAuthentication} from '../../state/stores/Authentication/AuthenticationStore';
+import ERRORCODE from '../../constants/errorCode';
 
 const config = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -17,7 +18,7 @@ const config = {
             app.initializeApp(config);
             app.auth().setPersistence(app.auth.Auth.Persistence.LOCAL);
         }
-        googleSignIn(): Promise<boolean> {
+        async googleSignIn(): Promise<number> {
            const googleProvider =  new app.auth.GoogleAuthProvider();
            return app.auth().signInWithPopup(googleProvider).then(signedInUser => {
             const user = signedInUser.additionalUserInfo!;
@@ -26,12 +27,12 @@ const config = {
             } else {
               console.log("Not new user");
             }
-            return true;
+            return 1;
         }).catch(error => {
-            return false;
+            return ERRORCODE.signIn.loginFailed.code;
         });
         }
-        facebookSignIn(): Promise<boolean> {
+        async facebookSignIn(): Promise<number> {
             const facebookProvider   = new app.auth.FacebookAuthProvider();
             return app.auth().signInWithPopup(facebookProvider).then(signedInUser => {
                 const user = signedInUser.additionalUserInfo!;
@@ -40,9 +41,9 @@ const config = {
                 } else {
                   console.log("Not new user");
                 }
-                return true;
+                return 1;
             }).catch(error => {
-                return false;
+                return ERRORCODE.signIn.loginFailed.code;
             });
         }
         isLoggedIn(): Promise<boolean> {
@@ -50,7 +51,6 @@ const config = {
       
                 app.auth().onAuthStateChanged(( user => {
                     if(user) {
-                        console.log(user!.uid);
                         resolve(true)
                     } else {
                         resolve(false);

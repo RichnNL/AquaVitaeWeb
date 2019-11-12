@@ -5,23 +5,23 @@ import * as React from 'react';
 
 
 export const backgroundColor = theme.variants('theme', 'type', {
-    primary: {light: Colors.primary.default },
-    secondary: {light: Colors.primary.light }
+    primary: {light: Colors.primary.default,  dark: Colors.primary.dark },
+    secondary: {light: Colors.primary.light, dark: Colors.secondary.dark}
   });
 
 export const backgroundColorHover = theme.variants('theme', 'type', {
-    primary: {light: Colors.secondary.default },
-    secondary: {light: Colors.primary.dark }
+    primary: {light: Colors.secondary.default,  dark: Colors.primary.dark },
+    secondary: {light: Colors.primary.dark,  dark: Colors.secondary.dark }
   });
   
 export const backgroundColorshadow = theme.variants('theme', 'type', {
-  primary: {light: Colors.secondary.light },
-  secondary: {light: Colors.primary.dark }
+  primary: {light: Colors.secondary.light, dark: Colors.primary.dark },
+  secondary: {light: Colors.primary.dark,  dark: Colors.secondary.dark }
 });
 
 export const borderColor = theme.variants('theme', 'type', {
-  primary: {light: Colors.secondary.default },
-  secondary: {light: Colors.primary.light }
+  primary: {light: Colors.secondary.default, dark: Colors.primary.dark },
+  secondary: {light: Colors.primary.light, dark: Colors.primary.dark }
 });
   
 export const textColor = theme.variants('theme', 'type', {
@@ -54,10 +54,16 @@ export const textLightFont = theme.variants('theme', 'type', {
   secondary: {light: 'OpenSans_Light' }
 });
 
-export const buttonFontSize = theme.variants('layout', 'size', {
+export const buttonFontSize = theme.variants('layout', 'btnSize', {
   small: { compact: '10px', cozy: '15px' },
   medium: { compact: '20px', cozy: '25px' },
   large: { compact: '30px', cozy: '35px' },
+});
+
+export const buttonPadding = theme.variants('layout', 'btnSize', {
+  small: { compact: '15px 50px;', cozy: '20px 60px;' },
+  medium: { compact: '24px 76px;', cozy: '30px 85px;' },
+  large: { compact: '35px 90px;', cozy: '40px 100px;' },
 });
 
 export interface ITheme {

@@ -1,7 +1,7 @@
 import React from 'react';
-import {AuthenticationContext} from '../context/AuthenticationContext';
+import AuthenticationContext from '../context/AuthenticationContext';
 
-export const useAuthenticationStore = () => {
+const useAuthenticationStore = () => {
     const context = React.useContext(AuthenticationContext);
      if(!context) {
        throw Error("Cannot be null");
@@ -9,3 +9,5 @@ export const useAuthenticationStore = () => {
        return context;
      }
    }
+
+export default useAuthenticationStore;

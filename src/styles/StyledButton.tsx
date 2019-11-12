@@ -1,8 +1,7 @@
-import styled from 'styled-components';
 import * as Theme from './theme/theme';
 import {Sizes} from './theme/media';
 import styledComponentsTS from 'styled-components-ts';
-import styledComponents from 'styled-components'
+import styledComponents from 'styled-components';
 
 export interface IStyledButton extends Theme.ITheme {
   type?: 'primary' | 'secondary';
@@ -10,7 +9,7 @@ export interface IStyledButton extends Theme.ITheme {
 }
 
 const StyledButton = styledComponentsTS<IStyledButton>(styledComponents.button)`
-background-color: ${Theme.backgroundColorshadow};
+background-color: ${Theme.backgroundColor};
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;
@@ -18,7 +17,7 @@ color: ${Theme.textColor};
 font-family: ${Theme.headerFont}  ;
 font-size: ${Theme.buttonFontSize};
 font-weight: 100;
-padding: 40px;
+padding:24px 76px;
 box-shadow: 1px 1px 20px 0px #000000;
 -webkit-box-shadow: 1px 1px 20px 0px #000000;
 -moz-box-shadow: 1px 1px 20px 0px #000000;
@@ -42,7 +41,6 @@ cursor: pointer;
 }
 
 `;
-
 
 export default StyledButton;
 

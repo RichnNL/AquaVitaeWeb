@@ -1,4 +1,5 @@
 import React from 'react';
-import {ThemeStore} from '../stores/ThemeStore';
+import { IThemeStore } from '../stores/Theme/ThemeStore';
 
-export const ThemeContext = React.createContext(ThemeStore);
+const ThemeContext = React.createContext<IThemeStore | null>(null);
+export default ThemeContext;

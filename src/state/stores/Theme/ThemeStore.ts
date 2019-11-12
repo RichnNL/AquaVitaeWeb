@@ -1,6 +1,3 @@
-import React from "react";
-
-
 export interface IThemeStore {
     theme: string;
     layout: string;
@@ -8,7 +5,7 @@ export interface IThemeStore {
     toggleLayout(): any; 
 }
 
-export const ThemeStore: IThemeStore = {
+const ThemeStore: IThemeStore = {
   theme: "light",
   layout: "cozy",
   toggleTheme() {
@@ -19,15 +16,15 @@ export const ThemeStore: IThemeStore = {
     }
   },
   toggleLayout() {
-    if(this.layout === "light") {
-        this.layout = "dark"
+    if(this.layout === "cozy") {
+        this.layout = "compact"
     } else {
-        this.layout = "light"
+        this.layout = "cozy"
     }
   }
 
 }
-export const createThemeStore = () => {
+const createThemeStore = () => {
   const store = {
     ...ThemeStore
   };
@@ -35,5 +32,6 @@ export const createThemeStore = () => {
   return store;
 };
 
-export type ThemeStore = ReturnType<typeof createThemeStore>
+export default createThemeStore;
+export type ThemeStoreType = ReturnType<typeof createThemeStore>;
 

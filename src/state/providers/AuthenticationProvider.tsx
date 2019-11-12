@@ -1,6 +1,6 @@
 import React from 'react';
-import { AuthenticationStore } from '../stores/AuthenticationStore';
-import {AuthenticationContext} from '../context/AuthenticationContext';
+import  AuthenticationStore  from '../stores/Authentication/AuthenticationStore';
+import AuthenticationContext from '../context/AuthenticationContext';
 import  Firebase  from "../../services/Firebase/Firebase";
 
 
@@ -11,7 +11,7 @@ export interface IAuthenticationProvider {
 
 export const AuthenticationProvider: React.FC<IAuthenticationProvider> = ({children}) => { 
   const authenticationStore = new AuthenticationStore(Firebase);
-  
+  authenticationStore.setAuthenticationFromPreviousSession();
   return  (
     <AuthenticationContext.Provider value={authenticationStore}>
           {children}

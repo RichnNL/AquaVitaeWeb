@@ -1,10 +1,8 @@
 import React from 'react';
-import { createThemeStore, ThemeStore } from '../stores/ThemeStore';
+import createThemeStore from '../stores/Theme/ThemeStore';
 import { useLocalStore, useObserver } from 'mobx-react';
 import { ThemeProvider } from 'styled-components';
-
-
-export const ThemeContext = React.createContext<ThemeStore | null>(null);
+import ThemeContext from '../context/ThemeContext';
 
 export interface IThemeProvider {
   children?: React.ReactNode | any; 

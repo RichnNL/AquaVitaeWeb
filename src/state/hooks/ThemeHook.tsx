@@ -1,7 +1,7 @@
 import React from 'react';
-import {ThemeContext} from '../context/ThemeContext';
+import ThemeContext from '../context/ThemeContext';
 
-export const useThemeStore = () => {
+const useThemeStore = () => {
     const context = React.useContext(ThemeContext);
      if(!context) {
        throw Error("Cannot be null");
@@ -9,3 +9,5 @@ export const useThemeStore = () => {
        return context;
      }
    }
+
+   export default useThemeStore;
