@@ -1,11 +1,12 @@
 import AuthenticationStore from './AuthenticationStore';
-import MockAuthentication from './AuthenticationMock';
+import Firebase from '../../../services/Firebase/__mocks__/Firebase';
+
 
 describe("AuthenticationStore", () => {
 
     it("LoginGoogle ", async() => {
-        const mockauthentication = new MockAuthentication();
-        const store = new AuthenticationStore(mockauthentication);
+        const store = new AuthenticationStore(Firebase);
+
         expect(store.loggedIn).toBe(false);
         //First Log in attempt fails
         await store.logInGoogle();
@@ -24,8 +25,7 @@ describe("AuthenticationStore", () => {
     })
 
     it("LoginFacebook ", async() => {
-        const mockauthentication = new MockAuthentication();
-        const store = new AuthenticationStore(mockauthentication);
+        const store = new AuthenticationStore(Firebase);
         expect(store.loggedIn).toBe(false);
         //First Log in attempt fails
         await store.logInFacebook();

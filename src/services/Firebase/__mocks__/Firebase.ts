@@ -1,9 +1,11 @@
-import {IAuthentication} from '../Authentication/AuthenticationStore';
+import {IAuthentication} from '../../../state/stores/Authentication/AuthenticationStore';
 import ERRORCODE from '../../../constants/errorCode';
-class MockAuthentication implements IAuthentication {
+class Firebase implements IAuthentication {
     mockSignIn = jest.fn();
     constructor() {
         this.mockSignIn.mockReturnValueOnce(ERRORCODE.signIn.loginFailed.code)
+        .mockReturnValueOnce(1)
+        .mockReturnValueOnce(ERRORCODE.signIn.loginFailed.code)
         .mockReturnValueOnce(1);
     }
         
@@ -42,4 +44,4 @@ class MockAuthentication implements IAuthentication {
 
 }
 
-export default MockAuthentication;
+export default new Firebase;
