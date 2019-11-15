@@ -6,7 +6,7 @@ cache:
   - node_modules
 
 before_install:
-  - npm i -g npm
+  - npm i -g npm@12.13.0
 install:
   - npm install
 script:
