@@ -7,8 +7,8 @@ cache:
 
 before_install:
   - npm i -g npm@6.12.0
+  - npm install -g node-gyp
 install:
-  - npm install grpc
   - npm install
 script:
   - npm run test:coverage
