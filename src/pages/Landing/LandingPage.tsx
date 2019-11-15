@@ -27,9 +27,9 @@ const  LandingPage: React.FC<Props> = (props) => {
   }
 
   const languageTest1 = () => {
-    if(language.currentLang == 'en-US') {
+    if(language.currentLang === 'en-US') {
       language.switchLang('es-ES');
-    } else if(language.currentLang == 'es-ES') {
+    } else if(language.currentLang === 'es-ES') {
       language.switchLang('nl-NL');
     } else {
       language.switchLang('en-US');
@@ -50,9 +50,6 @@ const  LandingPage: React.FC<Props> = (props) => {
   }
 
   return useObserver(() => {   
-    const clicked = ()=> {
-      history.push(PATH.Home);
-    }
      return <div>
         <Link to={PATH.Home}>Home</Link>
                 <Link to={PATH.Landing}>Splash</Link>

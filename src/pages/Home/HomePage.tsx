@@ -13,7 +13,6 @@ interface Props  {
 
 
 const  HomePage: React.FC<Props> = (props) => { 
-  const history = useHistory();
   const authentication = useAuthenticationStore();
   const theme = useThemeStore();
   const language = useLanguageStore();

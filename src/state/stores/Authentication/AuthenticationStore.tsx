@@ -43,7 +43,7 @@ class AuthenticationStore implements IAuthenticationStore  {
   async logInFacebook() {
     try{
       const result = await  this.authentication.facebookSignIn();
-      if(result == 1) {
+      if(result === 1) {
         runInAction(() => {
           this.loggedIn = true;
           this.picture = this.authentication.getPictureURL();
@@ -60,7 +60,7 @@ class AuthenticationStore implements IAuthenticationStore  {
   async logInGoogle() {
     try{
       const result = await this.authentication.googleSignIn();
-      if(result == 1) {
+      if(result === 1) {
         runInAction(() => {
           this.loggedIn = true;
           this.picture = this.authentication.getPictureURL();
