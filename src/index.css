@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Celtic';
+  src: local('Celtic'), url(./styles/fonts/celtic/Celtic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: local('OpenSans-Regular'), url(./styles/fonts/openSans/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans_Bold';
+  src: local('OpenSans-Bold'), url(./styles/fonts/openSans/OpenSans-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans_Italic';
+  src: local('OpenSans-Italic'), url(./styles/fonts/openSans/OpenSans-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans_Light';
+  src: local('OpenSans-Light'), url(./styles/fonts/openSans/OpenSans-Light.ttf) format('truetype');
+}
+
