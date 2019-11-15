@@ -1,6 +1,6 @@
 import React from 'react';
 import { useObserver } from 'mobx-react';
-import {Link, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 import { AVButton } from '../../components/Button/AVButton';
 import PATH from '../../constants/pathData';
 import { useAuthenticationStore } from '../../state/stores/Authentication';
