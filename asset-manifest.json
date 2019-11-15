@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AquaVitaeWeb/static/css/main.de674c87.chunk.css",
+    "main.js": "/AquaVitaeWeb/static/js/main.1441ee72.chunk.js",
+    "main.js.map": "/AquaVitaeWeb/static/js/main.1441ee72.chunk.js.map",
+    "runtime~main.js": "/AquaVitaeWeb/static/js/runtime~main.0c4d50a0.js",
+    "runtime~main.js.map": "/AquaVitaeWeb/static/js/runtime~main.0c4d50a0.js.map",
+    "static/js/2.ba2de2a2.chunk.js": "/AquaVitaeWeb/static/js/2.ba2de2a2.chunk.js",
+    "static/js/2.ba2de2a2.chunk.js.map": "/AquaVitaeWeb/static/js/2.ba2de2a2.chunk.js.map",
+    "index.html": "/AquaVitaeWeb/index.html",
+    "precache-manifest.4276c953d0c8c3f202e39cad527ca280.js": "/AquaVitaeWeb/precache-manifest.4276c953d0c8c3f202e39cad527ca280.js",
+    "service-worker.js": "/AquaVitaeWeb/service-worker.js",
+    "static/css/main.de674c87.chunk.css.map": "/AquaVitaeWeb/static/css/main.de674c87.chunk.css.map",
+    "static/media/index.css": "/AquaVitaeWeb/static/media/OpenSans-Regular.629a55a7.ttf"
+  }
+}
